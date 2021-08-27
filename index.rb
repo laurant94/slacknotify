@@ -5,7 +5,7 @@ require 'active_support/time'
 
 
 def notify
-  webhook_url = "https://hooks.slack.com/services/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"
+  webhook_url = "https://hooks.slack.com/services/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"
 
   client = SlackNotify::Client.new(channel: "#diveintocode",
                                   webhook_url: webhook_url,
@@ -15,7 +15,6 @@ def notify
   client.notify(msg)
 end
 
-notify
 module Clockwork
   handler do |job|
     puts "sending new comment to slack #diveintocode"
